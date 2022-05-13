@@ -13,6 +13,10 @@ steps:
 - task: MavenAuthenticate@0
   inputs:
     artifactsFeeds: 'maven'
+
+- task: CmdLine@2
+  inputs:
+    script: 'cat ~/.m2/settings.xml'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
